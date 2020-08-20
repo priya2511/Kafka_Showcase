@@ -62,18 +62,6 @@
 									"type": "String",
 									"physicalType": "nvarchar"
 								}
-							},
-							{
-								"source": {
-									"name": "StateProvince",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"name": "dsstate",
-									"type": "String",
-									"physicalType": "nvarchar"
-								}
 							}
 						],
 						"typeConversion": true,

@@ -1,0 +1,34 @@
+{
+	"name": "dsaddresstarget",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "dsrasqldbls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "dsaddress",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "addressline1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "City",
+				"type": "nvarchar"
+			},
+			{
+				"name": "dsstate",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dsraaddress"
+		}
+	}
+}

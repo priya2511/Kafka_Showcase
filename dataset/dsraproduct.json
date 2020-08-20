@@ -1,0 +1,16 @@
+{
+	"name": "dsraproduct",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "dsrasqldbls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "SalesLT",
+			"table": "dsraproduct"
+		}
+	}
+}

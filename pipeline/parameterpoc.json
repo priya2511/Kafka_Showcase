@@ -1,0 +1,14 @@
+{
+	"name": "parameterpoc",
+	"properties": {
+		"parameters": {
+			"Interfacename": {
+				"type": "string"
+			},
+			"Interfacefilename": {
+				"type": "string"
+			}
+		},
+		"annotations": []
+	}
+}

@@ -1,0 +1,33 @@
+{
+	"name": "ADLSParquetsource",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "dsrablobls",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"InterfaceName": {
+				"type": "string",
+				"defaultValue": "DefaultInterface"
+			},
+			"InterfaceFileName": {
+				"type": "string",
+				"defaultValue": "DefaultFile"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": {
+					"value": "@concat(dataset().InterfaceName, '/', dataset().InterfaceFileName)",
+					"type": "Expression"
+				},
+				"container": "staging"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

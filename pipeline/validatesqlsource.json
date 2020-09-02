@@ -12,8 +12,8 @@
 						"referenceName": "dsradataset",
 						"type": "DatasetReference"
 					},
-					"timeout": "7.00:00:00",
-					"sleep": 10
+					"timeout": "0.00:00:60",
+					"sleep": 0
 				}
 			}
 		],

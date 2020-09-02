@@ -1,0 +1,22 @@
+{
+	"name": "dsradataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "dsrasqldbls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Customerid",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Customerdetail"
+		}
+	}
+}

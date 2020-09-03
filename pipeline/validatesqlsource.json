@@ -40,7 +40,7 @@
 				}
 			},
 			{
-				"name": "Set variable1",
+				"name": "Do nothing",
 				"type": "SetVariable",
 				"dependsOn": [
 					{

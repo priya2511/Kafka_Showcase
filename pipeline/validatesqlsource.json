@@ -30,7 +30,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@equals(activity('Validatesqlsource').output.exists,'false,')",
+						"value": "@equals(activity('Validatesqlsource').output.exists,false)",
 						"type": "Expression"
 					},
 					"ifFalseActivities": [

@@ -23,7 +23,7 @@
 					{
 						"activity": "Validatesqlsource",
 						"dependencyConditions": [
-							"Succeeded"
+							"Failed"
 						]
 					}
 				],

@@ -19,7 +19,14 @@
 			{
 				"name": "If Condition1",
 				"type": "IfCondition",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Validatesqlsource",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
@@ -38,19 +45,6 @@
 						}
 					]
 				}
-			},
-			{
-				"name": "Do nothing",
-				"type": "SetVariable",
-				"dependsOn": [
-					{
-						"activity": "Validatesqlsource",
-						"dependencyConditions": [
-							"Failed"
-						]
-					}
-				],
-				"userProperties": []
 			}
 		],
 		"annotations": []

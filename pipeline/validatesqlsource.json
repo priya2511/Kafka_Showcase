@@ -33,6 +33,17 @@
 						"value": "@equals(activity('Validatesqlsource').output.exists,'false,')",
 						"type": "Expression"
 					},
+					"ifFalseActivities": [
+						{
+							"name": "FalseWait",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 1
+							}
+						}
+					],
 					"ifTrueActivities": [
 						{
 							"name": "TrueWait",

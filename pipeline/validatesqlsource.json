@@ -17,7 +17,7 @@
 				}
 			},
 			{
-				"name": "If Condition1",
+				"name": "ValidateConnectionStatus",
 				"type": "IfCondition",
 				"dependsOn": [
 					{

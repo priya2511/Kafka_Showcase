@@ -1,0 +1,23 @@
+{
+	"name": "StreetTransformations",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "AzureINT19",
+						"type": "DatasetReference"
+					},
+					"name": "INTPlace"
+				},
+				{
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"script": "source(output(\n\t\tPlaceUUID as long,\n\t\tProvinceLegacyID as integer,\n\t\tPlaceLegacyID as integer,\n\t\tPlaceNameEnglish as string,\n\t\tPlaceNameFrench as string,\n\t\tRegionUUID as integer,\n\t\tPlaceAlternateIndicator as string,\n\t\tLastModifiedDate as date,\n\t\tPlaceMailingIndicator as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tinferDriftedColumnTypes: true,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> INTPlace\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1"
+		}
+	}
+}

@@ -20,8 +20,12 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
-			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tinferDriftedColumnTypes: true,\n\tformat: 'parquet',\n\twildcardPaths:['output/int19/dbo.INT_Place.parquet']) ~> FilePlace\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tinferDriftedColumnTypes: true,\n\tformat: 'parquet',\n\twildcardPaths:['output/int19/dbo.INT_Street.parquet']) ~> FileStreet"
+			"transformations": [
+				{
+					"name": "IJoinStreet"
+				}
+			],
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tinferDriftedColumnTypes: true,\n\tformat: 'parquet',\n\twildcardPaths:['output/int19/dbo.INT_Place.parquet']) ~> FilePlace\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tinferDriftedColumnTypes: true,\n\tformat: 'parquet',\n\twildcardPaths:['output/int19/dbo.INT_Street.parquet']) ~> FileStreet\nFilePlace, FileStreet join(ERROR_FUNCTION('') == ERROR_FUNCTION(''),\n\tjoinType:'inner',\n\tbroadcast: 'auto')~> IJoinStreet"
 		}
 	}
 }

@@ -1,0 +1,20 @@
+{
+	"name": "DS_INT19_Parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_INT19",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "output/int19",
+				"fileSystem": "staging"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

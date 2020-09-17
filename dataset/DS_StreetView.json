@@ -1,0 +1,83 @@
+{
+	"name": "DS_StreetView",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_StreetView",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "StreetLegacyID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PlaceUUID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "StreetAlternateIndicator",
+				"type": "varchar"
+			},
+			{
+				"name": "StreetDirectionTypePrefixAbbreviationEnglish",
+				"type": "varchar"
+			},
+			{
+				"name": "StreetDirectionTypePrefixAbbreviationFrench",
+				"type": "varchar"
+			},
+			{
+				"name": "StreetNameArticleEnglish",
+				"type": "varchar"
+			},
+			{
+				"name": "StreetNameArticleFrench",
+				"type": "varchar"
+			},
+			{
+				"name": "StreetNameEnglish",
+				"type": "varchar"
+			},
+			{
+				"name": "StreetNameFrench",
+				"type": "varchar"
+			},
+			{
+				"name": "StreetDirectionTypeAbbreviationEnglish",
+				"type": "varchar"
+			},
+			{
+				"name": "StreetDirectionTypeAbbreviationFrench",
+				"type": "varchar"
+			},
+			{
+				"name": "StreetTypeSuffixAbbreviationEnglish",
+				"type": "varchar"
+			},
+			{
+				"name": "StreetTypeSuffixAbbreviationFrench",
+				"type": "varchar"
+			},
+			{
+				"name": "StreetTypePrefixAbbreviationEnglish",
+				"type": "varchar"
+			},
+			{
+				"name": "StreetTypePrefixAbbreviationFrench",
+				"type": "varchar"
+			},
+			{
+				"name": "LastModifiedDate",
+				"type": "date"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "INT_Street"
+		}
+	}
+}

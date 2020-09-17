@@ -1,0 +1,57 @@
+{
+	"name": "AzureINT19",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "dsrasqldbls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "PlaceUUID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "ProvinceLegacyID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PlaceLegacyID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PlaceNameEnglish",
+				"type": "varchar"
+			},
+			{
+				"name": "PlaceNameFrench",
+				"type": "varchar"
+			},
+			{
+				"name": "RegionUUID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PlaceAlternateIndicator",
+				"type": "varchar"
+			},
+			{
+				"name": "LastModifiedDate",
+				"type": "date"
+			},
+			{
+				"name": "PlaceMailingIndicator",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "INT_Place"
+		}
+	}
+}

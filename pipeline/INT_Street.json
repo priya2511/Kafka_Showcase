@@ -53,7 +53,7 @@
 				]
 			},
 			{
-				"name": "Copy SqlDB_ADLS_StreetView",
+				"name": "Copy_SqlDB_ADLS_StreetView",
 				"type": "Copy",
 				"dependsOn": [
 					{

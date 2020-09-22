@@ -13,8 +13,9 @@
 				"folderPath": "int_19/del_inst",
 				"container": "input"
 			},
-			"columnDelimiter": ",",
+			"columnDelimiter": "\t",
 			"escapeChar": "\\",
+			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
 		"schema": []

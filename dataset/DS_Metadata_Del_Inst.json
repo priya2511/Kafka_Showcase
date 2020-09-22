@@ -10,10 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": {
-					"value": "@dataset().SourceFilename",
-					"type": "Expression"
-				},
 				"folderPath": "int_19",
 				"container": "input"
 			},

@@ -80,7 +80,7 @@
 										"recursive": true,
 										"wildcardFolderPath": "int_19",
 										"wildcardFileName": {
-											"value": "@activity('Meta_DeliveryInstallation').output.value",
+											"value": "@item()",
 											"type": "Expression"
 										}
 									},
@@ -111,19 +111,19 @@
 							"inputs": [
 								{
 									"referenceName": "DS_Metadata_Del_Inst",
-									"type": "DatasetReference",
-									"parameters": {
-										"SourceFilename": {
-											"value": "@item().SourceFilename",
-											"type": "Expression"
-										}
-									}
+									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
 								{
 									"referenceName": "DS_Del_Inst_staging",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"TargetFilename": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}

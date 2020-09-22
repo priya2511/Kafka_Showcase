@@ -5,11 +5,6 @@
 			"referenceName": "LS_interface19",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"Sourcefile": {
-				"type": "string"
-			}
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

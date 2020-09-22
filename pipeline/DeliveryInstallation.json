@@ -77,12 +77,7 @@
 									"type": "DelimitedTextSource",
 									"storeSettings": {
 										"type": "AzureBlobStorageReadSettings",
-										"recursive": true,
-										"wildcardFolderPath": "int_19/del_inst",
-										"wildcardFileName": {
-											"value": "@item()",
-											"type": "Expression"
-										}
+										"fileListPath": "input/int_19/del_inst"
 									},
 									"formatSettings": {
 										"type": "DelimitedTextReadSettings"

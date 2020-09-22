@@ -1,0 +1,23 @@
+{
+	"name": "DS_Metadata_Del_Inst",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_interface19",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "int_19",
+				"container": "input"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

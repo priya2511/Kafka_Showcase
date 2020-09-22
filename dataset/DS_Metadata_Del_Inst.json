@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"folderPath": "int_19",
+				"folderPath": "int_19/del_inst",
 				"container": "input"
 			},
 			"columnDelimiter": "\t",

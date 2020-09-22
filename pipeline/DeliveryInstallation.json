@@ -45,7 +45,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Meta_DeliveryInstallation').output.item()",
+						"value": "@activity('Meta_DeliveryInstallation').output.value",
 						"type": "Expression"
 					},
 					"isSequential": true,
@@ -55,7 +55,7 @@
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
-								"timeout": "0.00:00:60",
+								"timeout": "0.00:00:30",
 								"retry": 0,
 								"retryIntervalInSeconds": 30,
 								"secureOutput": false,

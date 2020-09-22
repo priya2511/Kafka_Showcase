@@ -29,6 +29,27 @@
 						"type": "DelimitedTextReadSettings"
 					}
 				}
+			},
+			{
+				"name": "For_CopyInputFiles",
+				"description": "Covert input files from csv to Parquet",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Meta_DeliveryInstallation",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Meta_DeliveryInstallation').output.item()",
+						"type": "Expression"
+					},
+					"isSequential": true
+				}
 			}
 		],
 		"annotations": []

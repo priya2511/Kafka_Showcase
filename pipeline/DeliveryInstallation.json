@@ -77,7 +77,12 @@
 									"type": "DelimitedTextSource",
 									"storeSettings": {
 										"type": "AzureBlobStorageReadSettings",
-										"recursive": true
+										"recursive": true,
+										"wildcardFolderPath": "int_19",
+										"wildcardFileName": {
+											"value": "@activity('Meta_DeliveryInstallation').output.value",
+											"type": "Expression"
+										}
 									},
 									"formatSettings": {
 										"type": "DelimitedTextReadSettings"
@@ -118,13 +123,7 @@
 							"outputs": [
 								{
 									"referenceName": "DS_Del_Inst_staging",
-									"type": "DatasetReference",
-									"parameters": {
-										"TargetFilename": {
-											"value": "@item().TargetFilename",
-											"type": "Expression"
-										}
-									}
+									"type": "DatasetReference"
 								}
 							]
 						}

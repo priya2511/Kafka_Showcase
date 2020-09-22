@@ -44,7 +44,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Meta_DeliveryInstallation').output.item()",
+						"value": "@activity('Meta_DeliveryInstallation').output.value",
 						"type": "Expression"
 					},
 					"isSequential": true,

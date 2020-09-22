@@ -107,13 +107,7 @@
 							"outputs": [
 								{
 									"referenceName": "DS_Del_Inst_staging",
-									"type": "DatasetReference",
-									"parameters": {
-										"TargetFilename": {
-											"value": "@item().TargetFilename",
-											"type": "Expression"
-										}
-									}
+									"type": "DatasetReference"
 								}
 							]
 						}

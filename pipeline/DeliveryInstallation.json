@@ -3,8 +3,8 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Meta_DeliveryInstallation",
-				"type": "GetMetadata",
+				"name": "Copy_Input_Staging",
+				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
@@ -15,108 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataset": {
-						"referenceName": "DS_Metadata_Del_Inst",
-						"type": "DatasetReference"
-					},
-					"fieldList": [
-						"childItems"
-					],
-					"storeSettings": {
-						"type": "AzureBlobStorageReadSettings",
-						"recursive": true
-					},
-					"formatSettings": {
-						"type": "DelimitedTextReadSettings"
-					}
-				}
-			},
-			{
-				"name": "For_LoopthroughInputFiles",
-				"description": "Covert input files from csv to Parquet",
-				"type": "ForEach",
-				"dependsOn": [
-					{
-						"activity": "Meta_DeliveryInstallation",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"userProperties": [],
-				"typeProperties": {
-					"items": {
-						"value": "@activity('Meta_DeliveryInstallation').output.childItems",
-						"type": "Expression"
-					},
-					"isSequential": true,
-					"activities": [
-						{
-							"name": "Copy_Input_Staging",
-							"type": "Copy",
-							"dependsOn": [],
-							"policy": {
-								"timeout": "0.00:00:30",
-								"retry": 0,
-								"retryIntervalInSeconds": 30,
-								"secureOutput": false,
-								"secureInput": false
-							},
-							"userProperties": [
-								{
-									"name": "Source",
-									"value": "input/int_19/del_inst/@{'<SourceFilename>'}"
-								},
-								{
-									"name": "Destination",
-									"value": "staging/del_inst/@{'<TargetFilename>'}"
-								}
-							],
-							"typeProperties": {
-								"source": {
-									"type": "DelimitedTextSource",
-									"storeSettings": {
-										"type": "AzureBlobStorageReadSettings",
-										"fileListPath": "input/int_19/del_inst"
-									},
-									"formatSettings": {
-										"type": "DelimitedTextReadSettings"
-									}
-								},
-								"sink": {
-									"type": "ParquetSink",
-									"storeSettings": {
-										"type": "AzureBlobStorageWriteSettings",
-										"copyBehavior": "PreserveHierarchy"
-									},
-									"formatSettings": {
-										"type": "ParquetWriteSettings"
-									}
-								},
-								"enableStaging": false,
-								"translator": {
-									"type": "TabularTranslator",
-									"typeConversion": true,
-									"typeConversionSettings": {
-										"allowDataTruncation": true,
-										"treatBooleanAsNumber": false
-									}
-								}
-							},
-							"inputs": [
-								{
-									"referenceName": "DS_Metadata_Del_Inst",
-									"type": "DatasetReference"
-								}
-							],
-							"outputs": [
-								{
-									"referenceName": "DS_Del_Inst_staging",
-									"type": "DatasetReference"
-								}
-							]
-						}
-					]
+					"enableStaging": false
 				}
 			}
 		],

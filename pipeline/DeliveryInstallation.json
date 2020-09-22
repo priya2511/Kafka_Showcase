@@ -95,7 +95,13 @@
 							"inputs": [
 								{
 									"referenceName": "DelimitedText1",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"SourceFilename": {
+											"value": "@{item().SourceFilename}",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [

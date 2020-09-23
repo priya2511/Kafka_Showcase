@@ -1,0 +1,20 @@
+{
+	"name": "DS_DL_INST_NEW",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_interface19",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "del_inst",
+				"container": "intermediate"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

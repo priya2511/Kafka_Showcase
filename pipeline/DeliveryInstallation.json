@@ -54,7 +54,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DS_Del_Inst_staging",
+						"referenceName": "DS_DL_INST_NEW",
 						"type": "DatasetReference"
 					}
 				]

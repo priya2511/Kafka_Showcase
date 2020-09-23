@@ -105,7 +105,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "DS_DL_INST_NEW",
+									"referenceName": "Del_Inst_Target_Dataset",
 									"type": "DatasetReference"
 								}
 							]

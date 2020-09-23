@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"folderPath": "del_inst",
-				"container": "staging"
+				"container": "intermediate"
 			},
 			"compressionCodec": "snappy"
 		},

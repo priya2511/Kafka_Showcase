@@ -1,0 +1,29 @@
+{
+	"name": "FacilityCURVW",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_interface19",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "v_INT_Facility.txt",
+				"folderPath": "int_19/del_inst",
+				"container": "input"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "FacilityUUID\tFacilityLegacyID\tPostalCodeLegacyID\tPostalCodeUUID\tFacilityPlantIdentifier\tFacilityNameEnglish\tFacilityNameFrench\tFacilityRoutingTagNameEnglish\tFacilityAbbreviatedNameEnglish\tFacilityAbbreviatedNameFrench\tFacilityTypeAbbreviationEnglish\tFacilityTypeAbbreviationFrench\tPostalAddressUUID\tServedPlaceLegacyID\tFacilityQualifierNameEnglish\tFacilityQualifierNameFrench\tDepotCodeName\tProcessingFacilityLegacyID\tFacilityCostCentre\tLastModifiedDate",
+				"type": "String"
+			}
+		]
+	}
+}

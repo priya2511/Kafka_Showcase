@@ -1,0 +1,29 @@
+{
+	"name": "RoutePND",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_interface19",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "v_INT_ROUTE_PND.txt",
+				"folderPath": "int_19/del_inst",
+				"container": "input"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Route_UUID\tRouteDisplayName\tFacilityUUID\tRestructureScheduleImplementationDate\tRestructureScheduleValidationDate",
+				"type": "String"
+			}
+		]
+	}
+}

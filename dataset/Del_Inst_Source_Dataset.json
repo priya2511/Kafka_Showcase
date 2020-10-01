@@ -5,20 +5,11 @@
 			"referenceName": "LS_interface19",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"SourceFileName": {
-				"type": "string"
-			}
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": {
-					"value": "@dataset().SourceFileName",
-					"type": "Expression"
-				},
 				"folderPath": "int_19/del_inst",
 				"container": "input"
 			},

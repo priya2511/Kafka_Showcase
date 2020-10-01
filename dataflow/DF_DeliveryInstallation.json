@@ -1,0 +1,38 @@
+{
+	"name": "DF_DeliveryInstallation",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "FacilityCURVW",
+						"type": "DatasetReference"
+					},
+					"name": "FacilityCURVW"
+				},
+				{
+					"dataset": {
+						"referenceName": "RouteCURVW",
+						"type": "DatasetReference"
+					},
+					"name": "RouteCURVW"
+				},
+				{
+					"dataset": {
+						"referenceName": "RoutePND",
+						"type": "DatasetReference"
+					},
+					"name": "RoutePND"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "LkpFacilityRouteCURVW"
+				}
+			],
+			"script": "source(output(\n\t\tFacilityUUID as short,\n\t\tFacilityLegacyID as short,\n\t\tPostalCodeLegacyID as integer,\n\t\tPostalCodeUUID as integer,\n\t\tFacilityPlantIdentifier as string,\n\t\tFacilityNameEnglish as string,\n\t\tFacilityNameFrench as string,\n\t\tFacilityRoutingTagNameEnglish as string,\n\t\tFacilityAbbreviatedNameEnglish as string,\n\t\tFacilityAbbreviatedNameFrench as string,\n\t\tFacilityTypeAbbreviationEnglish as string,\n\t\tFacilityTypeAbbreviationFrench as string,\n\t\tPostalAddressUUID as short,\n\t\tServedPlaceLegacyID as date,\n\t\tFacilityQualifierNameEnglish as string,\n\t\tFacilityQualifierNameFrench as string,\n\t\tDepotCodeName as string,\n\t\tProcessingFacilityLegacyID as integer,\n\t\tFacilityCostCentre as string,\n\t\tLastModifiedDate as date\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> FacilityCURVW\nsource(output(\n\t\t{RouteUUID\tFacilityUUID\tRouteTypeEnglish\tRouteTypeFrench\tLastModifiedDate} as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> RouteCURVW\nsource(output(\n\t\tRoute_UUID as short,\n\t\tRouteDisplayName as string,\n\t\tFacilityUUID as short,\n\t\tRestructureScheduleImplementationDate as date,\n\t\tRestructureScheduleValidationDate as date\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> RoutePND\nFacilityCURVW, RouteCURVW lookup(ERROR_FUNCTION('') == ERROR_FUNCTION(''),\n\tmultiple: false,\n\tpickup: 'any',\n\tbroadcast: 'auto')~> LkpFacilityRouteCURVW"
+		}
+	}
+}

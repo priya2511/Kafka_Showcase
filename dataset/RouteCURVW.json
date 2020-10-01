@@ -1,0 +1,29 @@
+{
+	"name": "RouteCURVW",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_interface19",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "v_INT_ROUTE.txt",
+				"folderPath": "int_19/del_inst",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "RouteUUID\tFacilityUUID\tRouteTypeEnglish\tRouteTypeFrench\tLastModifiedDate",
+				"type": "String"
+			}
+		]
+	}
+}

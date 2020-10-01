@@ -21,7 +21,23 @@
 		},
 		"schema": [
 			{
-				"name": "Route_UUID\tRouteDisplayName\tFacilityUUID\tRestructureScheduleImplementationDate\tRestructureScheduleValidationDate",
+				"name": "Route_UUID",
+				"type": "String"
+			},
+			{
+				"name": "RouteDisplayName",
+				"type": "String"
+			},
+			{
+				"name": "FacilityUUID",
+				"type": "String"
+			},
+			{
+				"name": "RestructureScheduleImplementationDate",
+				"type": "String"
+			},
+			{
+				"name": "RestructureScheduleValidationDate",
 				"type": "String"
 			}
 		]
